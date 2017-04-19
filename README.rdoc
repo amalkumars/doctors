@@ -1,28 +1,36 @@
+
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version - 2.3.3
 
-Things you may want to cover:
+* Ruby version - 4.2.6
 
-* Ruby version
+* System Dependencies
+  - bundle install (to install all the Gems and dependencies)
+  - rake db:migrate (to install migrations)
+  - rails server (to run the rails app)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Database
+  - SQLite
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* To run the test suite
+
+  - rake test (To run all the test cases)
+
+* Assumptions made in the algorithm
+
+  - Event will have start and end date in the same day
+  - Multiple opening entries is possible in a day E.g [9 - 10:30], [12 - 3:30]
+  - Appointment is created only on available slots
+  - Each slot is of a 30 min duration
+
+
+* TASK
+
+  - The goal is to write an algorithm that checks the availabilities of an agenda depending of the events attached to it. The main method has a start date for input and is looking for the availabilities of the next 7 days.
+  - They are two kinds of events:
+
+    - 'opening', are the openings for a specific day and they can be reccuring week by week.
+    - 'appointment', times when the doctor is already booked.
+    - rails g model event starts_at:datetime ends_at:datetime kind:string weekly_recurring:boolean (sample event model)

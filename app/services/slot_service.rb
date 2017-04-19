@@ -1,5 +1,5 @@
-# Appointment Service
-# This class handles all the Slot management
+# Slot Service
+# This class handles all the Slot management Algorithm
 class SlotService
   # This method initailizes recurring_slots, non_recurring_slots, blocked_slots,
   # date and end_date for the slot service object for a given date
